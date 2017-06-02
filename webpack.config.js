@@ -23,8 +23,8 @@ module.exports = {
     extensions: [".js", ".ts"]
   },
   devServer: {
-    contentBase: "./dest/index.html",
+    contentBase: "./dest/",
     compress: true,
-    port: 9000
+    port: 10000
   }
 };
