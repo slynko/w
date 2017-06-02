@@ -21,5 +21,10 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".ts"]
+  },
+  devServer: {
+    contentBase: "./dest/index.html",
+    compress: true,
+    port: 9000
   }
 };
