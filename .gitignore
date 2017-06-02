@@ -3,3 +3,4 @@ node_modules
 dest/app.js
 dest/polyfill.js
 dest/vendor.js
+package-lock.json
