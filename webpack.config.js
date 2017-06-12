@@ -1,11 +1,11 @@
 module.exports = {
   entry: {
-    app: "./src/index.ts",
-    polyfill: "./src/polyfill.ts",
-    vendor: "./src/vendor.ts"
+    app: "./src/main/resources/static/index.ts",
+    polyfill: "./src/main/resources/static/polyfill.ts",
+    vendor: "./src/main/resources/static/vendor.ts"
   },
   output: {
-    filename: "./dest/[name].js"
+    filename: "./src/main/webapp/[name].js"
   },
   module: {
     loaders: [
@@ -21,10 +21,5 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".ts"]
-  },
-  devServer: {
-    contentBase: "./dest/",
-    compress: true,
-    port: 10000
   }
 };
