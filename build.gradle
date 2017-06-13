@@ -1,3 +1,7 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
 buildscript {
     repositories {
         mavenCentral()
@@ -6,10 +10,6 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
     }
 }
-
-apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: 'spring-boot'
 
 jar {
     baseName = 'shop'
@@ -24,5 +24,9 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
+    compile "org.elasticsearch.client:transport:5.4.1"
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-data-elasticsearch"
+
+    testCompile "org.springframework.boot:spring-boot-starter-test"
 }
